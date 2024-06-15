@@ -70,13 +70,13 @@ def submit_view(request):
         comment = data.get('commentTxt')
         review_ran = str(data.get('rangeVal'))
 
-        pred = clear_text(str(comment))
-        pred = prediction(pred)
+
+        pred = prediction(comment)
 
         if int(review_ran) >= 50 and pred == 'Positive':
-            pred = 'Positive'
+            predval = 'Positive'
         else:
-            pred = 'Negative'
+            predval = 'Negative'
 
         item = Item.objects.get(id=item_id)
         item.commentCount += 1

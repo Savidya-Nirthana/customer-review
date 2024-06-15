@@ -52,6 +52,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "customer_reviews.urls"
+CSRF_COOKIE_SAMESITE = 'Strict'
 
 TEMPLATES = [
     {

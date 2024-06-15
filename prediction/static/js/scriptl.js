@@ -100,7 +100,8 @@ document.addEventListener("DOMContentLoaded", function () {
         throw new Error(
           `HTTP error! status: ${response.status}, response: ${errorText}`
         );
-      } else {
+      }
+      else {
         location.reload();
       }
 
@@ -240,17 +241,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
           const CommentsVal = document.createElement("span");
           CommentsVal.classList.add("rendCommentsVal");
-          CommentsVal.innerHTML = "Score : <br />" + reviewDet.value;
+          CommentsVal.innerHTML = "Score : <br />" + reviewDet.value + "/100";
 
           const sentiment = document.createElement("span");
-          sentiment.classList.add("rendCommentsVal");
-          sentiment.innerHTML = "Sentiment: <br />" + reviewDet.sentiment;
+          sentiment.classList.add("rendSentiment");
+          sentiment.innerHTML = reviewDet.sentiment;
+
+
+          if (reviewDet.sentiment === "Positive") {
+            sentiment.style.backgroundColor = "rgba(4, 119, 11, 0.71)";
+          } else {
+            sentiment.style.backgroundColor = "rgba(237, 20, 5, 0.71)";
+          }
+
           itemsArea.appendChild(rendComments);
+          rendComments.appendChild(sentiment);
           rendComments.appendChild(CommentsTxt);
           rendComments.appendChild(lineBreak2);
           rendComments.appendChild(CommentsVal);
           rendComments.appendChild(lineBreak2);
-          rendComments.appendChild(sentiment);
         });
       }
     });
