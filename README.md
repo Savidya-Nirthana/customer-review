@@ -1,4 +1,4 @@
-# customer-review
+# Customer-review
 
 <img width="873" alt="image" src="https://github.com/Savidya-Nirthana/customer-review/assets/136046765/0cc6973a-3983-44f0-a4a8-3d8a85891fb5">
 
