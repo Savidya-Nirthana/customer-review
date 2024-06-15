@@ -74,8 +74,8 @@ Contributions are welcome! Please follow these steps to contribute:
 4. Push to the branch (`git push origin feature/your-feature`).
 5. Open a pull request.
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+## Collabaration
+1. [Shehan Chrismika](https://github.com/chrishmika)
 
 ## Acknowledgements
 - [TensorFlow](https://www.tensorflow.org/)
